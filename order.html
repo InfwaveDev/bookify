@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter&family=Red+Hat+Display:wght@500&family=Space+Grotesk:wght@600&display=swap');
+        /* Reset default margin and padding for better alignment */
+        body, html {
+          margin: 0;
+          padding: 0;
+          font-family: 'Red Hat Display', sans-serif;
+        }
+
+        /* Style the page container for centering content */
+        .page-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          min-height: 100vh; /* Center content vertically */
+        }
+
+        /* Style the form container */
+        .form-container {
+          width: 350px; /* Adjust the width as needed */
+          padding: 50px;
+          border: 1px solid #ccc;
+          border-radius: 10px;
+          background-color: #f8f8f8;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Style form labels */
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  width: 80px; /* Adjust the width as needed (smaller value) */
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+        /* Style input fields */
+        input[type="text"] {
+          width: 100%;
+          padding: 10px;
+          font-size: 16px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          margin-bottom: 10px;
+          outline: none;
+        }
+
+        /* Style the select container */
+        select {
+          width: 100%;
+          padding: 10px;
+          font-size: 16px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          outline: none;
+        }
+
+        /* Style the submit button */
+        .btn {
+          width: 100%;
+          padding: 10px;
+          margin-top: 10px;
+          background-color: #000000;
+          color: #fff;
+          border: none;
+          border-radius: 5px;
+          font-size: 16px;
+          cursor: pointer;
+        }
+
+        .btn:hover {
+          background-color: #080808;
+        }
+
+        /* Style the information text */
+        .inf {
+          font-size: 12px;
+          color: #777;
+          text-align: center;
+          margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <br>
+    <h2>Order</h2>
+</center>
+    <div class="page-container">
+        <div class="form-container">
+            <form name="OrderForm" method="POST" data-netlify="true" action="thankyou.html">
+                <input type="hidden" name="form-name" value="studentInfo" />
+                
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required />
+                
+                <label for="class">Class:</label>
+                <input type="text" id="class" name="class" placeholder="Your Class" required />
+                
+                <label for="poem">Poem:</label>
+                <select id="poem" name="poem[]" multiple required>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+                
+                <button class="btn" type="submit">Order</button>
+            </form>
+        </div>
+        <p class="inf">© 2023, Infwave<br>© 2023, Duodetza Holdings</p>
+    </div>
+</body>
+</html>

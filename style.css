@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Red+Hat+Display:wght@500&family=Space+Grotesk:wght@600&display=swap');
+
+h1, h2, h3, h4, label {
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+p {
+    font-family: 'Inter', sans-serif;
+}
+
+.btn {
+background-color: black;
+border-radius: 12px;
+border:none;
+padding: 15px;
+font-family: 'Red Hat Display', sans-serif;
+color: white;
+    }
+
+        
+    .btn:disabled {
+        pointer-events: none;
+      }
+      
+      .btn:hover {
+        box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+        transform: translateY(-2px);
+      }
+      
+      .btn:active {
+        box-shadow: none;
+        transform: translateY(0);
+      }
+
+      .btnalt {
+        background-color: rgb(255, 255, 255);
+        border-radius: 12px;
+        border: 10px;
+        border-color: black;
+        padding: 15px;
+        font-family: 'Inter', sans-serif;
+        color: rgb(0, 0, 0);
+            }
+        
+                
+            .btnalt:disabled {
+                pointer-events: none;
+              }
+              
+              .btnalt:hover {
+                box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+                transform: translateY(-2px);
+              }
+              
+              .btn:active {
+                box-shadow: none;
+                transform: translateY(0);
+              }
+              @keyframes headertext {
+                0% { transform: translatey(0px); }
+                50% { transform: translatey(-10px); }
+                100% { transform: translatey(0px); }
+            }
+            .headertext {
+                font-size: 3em;
+                overflow: hidden;
+                transform: translatey(0px);
+                animation: headertext 3s ease-in-out infinite;
+                margin: 50px;
+            }
+
+            .inf {
+                font-family: 'Space Grotesk', sans-serif;
+            }
+            .card {
+                margin: 0 5%;
+                border: none;
+                border-radius: 10px;
+                padding: 20px;
+                font-family: 'Space Grotesk', sans-serif;
+                background-color: #fff;
+                transition: transform 0.2s, box-shadow 0.2s;
+                position: relative;
+            }
+            
+            .card:hover {
+                transform: scale(1.02);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+            
+            .card::before {
+                content: '';
+                position: absolute;
+                top: -10px;
+                left: -10px;
+                right: -10px;
+                bottom: -10px;
+                border: 2px solid rgba(255, 255, 255, 0.2); /* Lighter glass border */
+                border-radius: 12px; /* Slightly larger border radius for smooth curves */
+                background: linear-gradient(45deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%); /* Glossy shine effect */
+                z-index: -1;
+                opacity: 0;
+                transition: opacity 0.2s;
+            }
+            
+            .card:hover::before {
+                opacity: 1;
+            }
+            
+/* Style the select container */
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+  }
+  
+  /* Style the select on hover */
+  select:hover {
+    border-color: #999; /* Darker gray on hover */
+  }
+  
+  /* Style the select when it's in focus (clicked) */
+  select:focus {
+    border-color: #007bff; /* Blue border when in focus */
+  }
+  
+  /* Style the dropdown arrow icon (you can use your own icon or customize as needed) */
+  select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+  
+  /* Style the options within the select */
+  option {
+    padding: 5px;
+    background-color: #fff;
+    color: #333;
+  }
+  
+  /* Style the options on hover */
+  option:hover {
+    background-color: #f5f5f5; /* Light gray background on hover */
+  }
+  
